@@ -1,0 +1,851 @@
+header {
+	padding: 0 0 40px 0;
+	@include respond-to(tablet-portrait) {
+		padding: 0 0 30px 0;
+	}
+	@include respond-to(mobile) {
+		padding: 0;
+	}
+}
+.header-top__i {
+	width: 980px;
+	margin: 0 auto;
+	padding: 0 20px;
+	height: 32px;
+	box-sizing: border-box;
+	@include respond-to(tablet) {
+		width: 100%;
+	}
+	@include respond-to(tablet-portrait) {
+		width: 100%;
+	}
+	@include respond-to(mobile) {
+		width: 100%;
+		height: 60px;
+		position: relative;
+	}
+}
+.header-top {
+	background: #e5e7e2;
+	@include respond-to (mobile){
+		position: relative;
+		z-index: 2;
+	}
+}
+.mobile-menu, .mobile-search, .mobile-cart {
+	position: absolute;
+	width: 36px;
+	height: 35px;
+	display: none;
+	@include respond-to (mobile){
+		display: block;
+	}
+}
+.mobile-menu {
+	top: 50%;
+	left: 25px;
+	transform:translate(0, -50%);
+}
+.mobile-search {
+	top: 50%;
+	right: 90px;
+	transform:translate(0, -50%);
+}
+.mobile-cart {
+	top: 50%;
+	right: 25px;
+	transform:translate(0, -50%);
+}
+.sign-in {
+	float: left;
+	@include respond-to(mobile) {
+		display: none;
+	}
+	ul {
+		li {
+			float: left;
+			padding: 0 0 0 25px;
+			a {
+				font-family: $calibri;
+				font-size: 15px;
+				line-height: 32px;
+				color: $gray;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			&:first-child {
+				padding: 0;
+			}
+		}
+	}
+}
+.socials {
+	float: left;
+	padding: 0 0 0 20px;
+	@include respond-to(mobile) {
+		display: none;
+	}
+	ul {
+		padding: 7px 0 0 0;
+		li {
+			float: left;
+			padding: 0 0 0 10px;
+			&:first-child {
+				padding: 0;
+			}
+		}
+	}
+}
+.partnership {
+	float: right;
+	@include respond-to(mobile) {
+		display: none;
+	}
+	ul {
+		li {
+			float: left;
+			padding: 0 0 0 35px;
+			a {
+				font-family: $calibri;
+				font-size: 15px;
+				line-height: 32px;
+				color: $gray;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			&:first-child {
+				padding: 0;
+			}
+		}
+	}
+}
+.header-middle__i {
+	width: 980px;
+	margin: 0 auto;
+	padding: 30px 20px 20px 20px;
+	box-sizing: border-box;
+	@include respond-to(tablet) {
+		width: 100%;
+	}
+	@include respond-to(tablet-portrait) {
+		width: 100%;
+		position: relative;
+	}
+	@include respond-to(mobile) {
+		width: 100%;
+		text-align: center;
+		padding: 30px 20px 0 20px;
+	}
+}
+.callback {
+	float: left;
+	@include respond-to(mobile) {
+		display: none;
+	}
+	p {
+		font-family: $calibri;
+		font-size: 26px;
+		line-height: 29px;
+		font-weight: bold;
+		color: $green;
+	}
+	a {
+		font-family: $calibri;
+		font-size: 13px;
+		line-height: 16px;
+		font-weight: normal;
+		color: $gray;
+		border-bottom: 1px dashed $gray;
+		position: relative;
+		margin: 0 10px 0 0;
+		&:hover {
+			border-bottom: 1px solid $gray;
+		}
+	}
+}
+.logo {
+	float: left;
+	width: 191px;
+	display: block;
+	padding: 0 0 0 60px;
+	@include respond-to(mobile) {
+		padding: 0;
+		float: none;
+		display: inline-block;
+	}
+	img {
+		max-width: 100%;
+		width: 100%;
+		display: block;
+	}
+}
+.map-address {
+	float: left;
+	width: 260px;
+	padding: 0 0 0 60px;
+	box-sizing: border-box;
+	@include respond-to(mobile) {
+		display: none;
+	}
+	p {
+		font-family: $calibri;
+		font-size: 13px;
+		line-height: 16px;
+		font-weight: normal;
+		color: $green;
+	}
+	a {
+		font-family: $calibri;
+		font-size: 13px;
+		line-height: 13px;
+		font-weight: normal;
+		color: $gray;
+		border-bottom: 1px dashed $gray;
+		position: relative;
+		margin: 0 10px 0 0;
+		&:hover {
+			border-bottom: 1px solid $gray;
+		}
+	}
+}
+.open-mobile-searh {
+	.header-middle {
+		.search {
+			top: 15%;
+		}
+	}
+}
+.header-middle {
+	.search {
+		float: left;
+		width: 216px;
+		padding: 0 0 0 25px;
+		position: relative;
+		@include respond-to(mobile) {
+			position: absolute;
+		    top: -136%;
+		    left: 50%;
+		    transform: translate(-50%, 0);
+		    z-index: 1;
+		    padding: 6px;
+	    	border: 1px solid #cccccc;
+	    	border-radius: 2px;
+	    	transition: top 1s;
+	    	background: #FFFFFF;
+		}
+
+		input[type="text"] {
+			width: 82%;
+			height: 35px;
+			border: none;
+			outline: none;
+			@include placeholder-color(#c3c6bf);
+			border-radius: 5px;
+			box-sizing: border-box;
+			font-family: $calibri;
+			font-size: 15px;
+			line-height: 18px;
+			color: #c3c6bf;
+			padding: 0 10px;
+				@include respond-to(mobile) {
+				width: 100%;
+				padding: 0 40px 0 10px;
+			}
+
+		}
+		input[type="submit"] {
+			position: absolute;
+			top: 0;
+			right: 0;
+			@include bg($search-button);
+			background-color: #FFFFFF;
+			cursor: pointer;
+			border: none;
+			outline: none;
+			color:#FFFFFF;
+			-webkit-appearance: none;
+			   -moz-appearance: none;
+			@include respond-to(mobile) {
+				top: 50%;
+			    right: 10px;
+			    transform: translate(0, -50%);
+			}
+		}
+		@include respond-to(tablet) {
+			padding: 0 0 0 70px;
+		}
+		@include respond-to(tablet-portrait) {
+			position: absolute;
+			width: 200px;
+			bottom: -38px;
+			right: 34%;
+			padding: 0;
+		}
+	}
+}
+
+.header-bottom__i {
+	width: 980px;
+	margin: 0 auto;
+	padding: 0 20px 0 5px;
+	box-sizing: border-box;
+	position: relative;
+	@include respond-to(tablet) {
+		width: 100%;
+	}
+	@include respond-to(tablet-portrait) {
+		width: 100%;
+		padding: 0 20px;
+		position: relative;
+	}
+	@include respond-to(mobile) {
+		width: 100%;
+		padding: 0 20px;
+		position: relative;
+	}
+}
+.open-mobile-menu {
+	.header-bottom {
+		nav {
+			transform: translate(0, 0);
+		}
+	}
+}
+.header-bottom {
+
+	nav {
+		float: left;
+		@include respond-to(tablet) {
+			display: block;
+		}
+		@include respond-to(tablet-portrait) {
+			width: 100%;
+			text-align: center;
+		}
+		@include respond-to(mobile) {
+			float: none;
+			width: 100%;
+			position: absolute;	
+			top: -75px;
+			left: 0;
+			z-index: 2;
+		    background-color: #FFFFFF;
+		    padding: 12px 10px;
+		    box-sizing: border-box;
+		    transform: translate(-100%, 0);
+		    transition: transform .8s;
+		}
+		ul {
+			width: 735px;
+			@include respond-to(tablet-portrait) {
+				display: none;
+			}
+			@include respond-to(mobile) {
+				width: 100%;
+			}
+			li {
+				float: left;
+				border-top: 3px solid transparent;
+				border-left: 3px solid transparent;
+				border-right: 3px solid transparent;
+				&.catalog {
+					position: relative;
+					text-align: left;
+					>a {
+						padding: 10px 26px 10px 13px;
+						position: relative;
+						z-index: 2;
+						color: $bright-green;
+						font-weight: bold;
+						@include respond-to(tablet-portrait) {
+							background-color: #ecf4e2;
+						}
+						@include respond-to(mobile) {
+							padding: 0 26px 0 9px;
+							font-weight: normal;
+							color: $gray;
+							display: block;
+							position: relative;
+							&:after {
+								@include respond-to(mobile) {
+									content: "";
+									position: absolute;
+									@include bg($big-arrow-down);
+									top: 50%;
+									right: 15px;
+									transform:translate(0, -50%);
+								}
+							}
+						}
+						span {
+							position: relative;
+							&:after {
+								content: "";
+								@include bg($rectangle-green);
+								position: absolute;
+								top: 50%;
+								right: -10px;
+								transform:translate(0, -50%);
+								@include respond-to(mobile) {
+									display: none;
+								}
+							}
+						}
+					}
+					&:hover {
+						.inner-menu {
+							display: block;
+							@include respond-to(tablet) {
+								display: none;
+							}
+							@include respond-to(tablet-portrait) {
+								display: none;
+							}
+							@include respond-to(mobile) {
+								display: none;
+							}
+						}
+						a {
+							span {
+								&:after {
+									content: "";
+									@include bg($rectangle-white);
+									@include respond-to(mobile) {
+										display: none;
+									}
+								}
+							}
+						}
+					}
+					.inner-menu {
+						width: 330px;
+						background-color: $bright-green;
+						border-radius: 2px;
+						position: absolute;
+						z-index: 1;
+						box-sizing: border-box;
+						padding: 10px 0 20px 0;
+						display: none;
+						top: 38px;
+						left: 0;
+						-webkit-box-shadow: 0px 0px 0px 4px rgba(255,255,255,1);
+						   -moz-box-shadow: 0px 0px 0px 4px rgba(255,255,255,1);
+								box-shadow: 0px 0px 0px 4px rgba(255,255,255,1);
+						@include respond-to(mobile) {
+							width: 100%;
+							background-color: #FFFFFF;
+							box-shadow: none;
+							border-radius: 0;
+							padding: 10px 0;
+						}
+						li {
+							float: none;
+							@include respond-to(mobile) {
+								border-bottom: 1px solid $green;
+							}
+							a {
+								color: #FFFFFF;
+								display: block;
+								font-size: 17px;
+								line-height: 19px;
+								padding: 5px 5px 5px 20px;
+								@include respond-to(mobile) {
+									color: $gray;
+								}
+								&:after {
+									@include respond-to(mobile) {
+										display: none;
+									}
+								}
+							}
+							&:hover {
+								a {
+									background-color: #75c32f;
+								}
+							}
+						}
+						@include respond-to(mobile) {
+							position: relative;
+							top: 0;
+						}
+					}
+				}
+				&.calculator-m {
+					padding: 0 0 10px 0;
+					@include respond-to(mobile) {
+						padding: 0;
+					}
+					&.show {
+						position: relative;
+						border-radius: 5px 5px 0 0;
+						border-top: 3px solid #cccccc;
+						border-left: 3px solid #cccccc;
+						border-right: 3px solid #cccccc;
+						background-color: #FFFFFF;
+						z-index: 5;
+						&:hover {
+							a {
+								background-color: transparent;
+								color: $gray;
+							}
+						}
+					}
+				}
+				a {
+					font-family: $calibri;
+					font-size: 17px;
+					line-height: 40px;
+					color: $gray;
+					padding: 10px 9px;
+					@include respond-to(tablet-portrait) {
+						background: $bright-green;
+						color: #FFFFFF;
+						border-radius: 2px;
+					}
+					@include respond-to(mobile) {
+						color: #FFFFFF;
+						padding: 0 9px;
+						display: block;
+					}
+				}
+				&:hover {
+					a {
+						background: $bright-green;
+						color: #FFFFFF;
+						border-radius: 2px;
+						@include respond-to(mobile) {
+							background-color: $green;
+							color: #FFFFFF;						
+						}
+					}
+				}
+				@include respond-to(mobile) {
+					float: none;
+					border: none;
+					background-color: $green;
+				    border-radius: 5px;
+				    margin: 0 0 5px 0;
+				}
+			}
+			&.catalog__w {
+				float: left;
+				width: auto;
+				&.active {
+
+					a {
+						@include respond-to(mobile) {
+							color: $gray;
+							background-color: #FFFFFF;
+							&:after {
+								@include respond-to(mobile) {
+									content: "";
+									position: absolute;
+									@include bg($big-arrow-up);
+									top: 50%;
+									right: 15px;
+									transform:translate(0, -50%);
+								}
+							}
+						}
+					}
+				}
+				@include respond-to(tablet-portrait) {
+					display: block;
+					position: absolute;
+					top: -2px;
+					left: 20px;
+				}
+				li {
+					float: none;
+					a {
+						@include respond-to(mobile) {
+							color: #FFFFFF;
+						}
+					}
+					
+				}
+				@include respond-to(mobile) {
+					float: none;
+				}
+			}
+		}
+	}
+	
+	.btn_tablet-menu {
+		display: none;
+		@include respond-to(tablet-portrait) {
+			display: block;
+			float: left;
+			margin: 0 0 10px 170px;
+		}
+	}
+}
+
+.calculator__w {
+	position: absolute;
+	padding: 35px 0 30px 0;
+	z-index: 4;
+	top: 100%;
+	left: 0;
+	margin: -3px 0 0 15px;
+	width: 96.5%;
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-position: 2% 83%;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	border: 3px solid #cccccc;
+	display: none;
+	.calculator-info {
+		float: right;
+		width: 32%;
+		padding: 85px 25px 10px 10px;
+		text-align: center;
+		box-sizing: border-box;
+		p {
+			font-family: $calibri;
+			font-size: 19px;
+			line-height: 22px;
+			font-style: italic;
+			color: $orange;
+			&:first-child {
+				padding: 0 0 10px 0;
+			}
+			span {
+				font-family: $calibri;
+				font-size: 30px;
+				line-height: 33px;
+				font-style: normal;
+				color: $green;
+			}
+			a {
+				font-size: 25px;
+				line-height: 27px;
+				color: $green;
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.calculator-options {
+		float: left;
+		width: 63%;
+		box-sizing: border-box;
+	}
+}
+.input-item {
+	font-size: 0;
+	padding: 0 0 6px 0;
+	p {
+		font-family: $calibri;
+		font-size: 17px;
+		line-height: 24px;
+		color: $green;
+		display: inline-block;
+		padding: 0 0 0 8px;
+		&.label {
+			width: 55%;
+			text-align: right;
+			box-sizing:border-box;
+			padding: 0 20px 0 0;
+		}
+	}
+	.input-item__w {
+		width: 96px;
+		box-sizing: border-box;
+		position: relative;
+		display: inline-block;
+		input {
+			width: 100%;
+			height: 40px;
+			outline: none;
+			border: 1px solid #e5e7e2;
+			border-radius: 3px;
+			padding: 0 31px 0 33px;
+			box-sizing: border-box;
+			text-align: center;
+			font-family: $calibri;
+			font-size: 17px;
+			line-height: 19px;
+			color: $gray;
+		}
+		a {
+			position: absolute;
+			top: 0;
+			width: 31px;
+			height: 100%;
+			&.up {
+				right: 0;
+			}
+			&.down {
+				left: 0;
+			}
+		}
+	}
+}
+.select-item {
+	padding: 0 0 6px 0;
+	p {
+		font-family: $calibri;
+		font-size: 17px;
+		line-height: 24px;
+		color: $green;
+		display: inline-block;
+		&.label {
+			width: 55%;
+			text-align: right;
+			box-sizing:border-box;
+			padding: 0 20px 0 0;
+		}
+	}
+	.select-item__w {
+		width: 45%;
+		display: inline-block;
+		select {
+			font-family: $calibri;
+			font-size: 17px;
+			line-height: 19px;
+			color: $gray;
+		}
+	}
+}
+.select2-container--classic {
+	.select2-selection--single {
+		background-color: #FFFFFF;
+	    border: 1px solid #e5e7e2;
+	    border-radius: 3px;
+	    outline: 0;
+	    background-image: none;
+	    height: 40px;
+		.select2-selection__rendered {
+			font-family: $calibri;
+			font-size: 17px;
+			line-height: 36px;
+			color: $gray;
+			padding: 0 40px 0 14px;
+		}
+		.select2-selection__arrow {
+			background-color: transparent;
+		    border: none;
+		    height: 40px;
+		    position: absolute;
+		    top: 1px;
+		    right: 1px;
+		    width: 40px;
+		    background-image: none;
+		    b {
+		    	@include bg($arrow-down);
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    margin: -5px 0 0 -10px;
+			    border-style: none;
+		    }
+		}
+		&:focus {
+			border: 1px solid #d3d4d2;
+		}
+	}
+	&.select2-container--open {
+		.select2-dropdown {
+			border-color: #e5e7e2;
+		}
+		.select2-selection--single {
+			border-color: #e5e7e2;
+			.select2-selection__arrow {
+				b {
+					@include bg($arrow-up);
+				    position: absolute;
+				    top: 50%;
+				    left: 50%;
+				    margin: -5px 0 0 -10px;
+				    border-style: none;
+				}
+			}
+		}
+		&.select2-container--below {
+			.select2-selection--single {
+				background-image: none;
+			}
+		}
+		&.select2-container--above {
+			.select2-selection--single {
+			    background-image: none;
+			}
+		}
+	}
+	.select2-results__option--highlighted[aria-selected] {
+		background-color: #f6f7f5;
+		color: $gray;
+	}
+}
+.select2-results__option {
+    padding: 0 10px 0 14px;
+    font-family: $calibri;
+	font-size: 17px;
+	line-height: 40px;
+	color: $gray;
+}
+.callback-content {
+	padding: 20px 0 0 0;
+}
+.callback-content-w {
+	border-radius: 11px;
+	background-color: #e5e7e2;
+	padding: 23px 18px 23px 0;
+	position: relative;
+	.input-list {
+		float: left;
+		.input-item {
+			float: left;
+			padding: 0 0 0 20px;
+			font-size: 15px;
+			p {
+				float: left;
+				font-family: $calibri;
+				font-size: 15px;
+				line-height: 40px;
+				color: $green;
+				padding: 0 10px 0 0;
+				@include respond-to(tablet-portrait) {
+					line-height: 35px;
+				}
+			}
+			.input-w {
+				float: left;
+				width: 218px;
+				input {
+					width: 100%;
+					height: 40px;
+					box-sizing:border-box;
+					outline: none;
+					border: none;
+					border-radius: 1px;
+					padding: 0 10px;
+					font-family: $calibri;
+					font-size: 15px;
+					line-height: 40px;
+					color: $green;
+					@include respond-to(tablet-portrait) {
+						height: 35px;
+					}
+				}
+				@include respond-to(tablet-portrait) {
+					width: 160px;
+				}
+			}
+		}
+	}
+	.close-callback{
+		position: absolute;
+		top: -6px;
+		right: -24px;
+		width: 14px;
+		height: 14px;
+		padding: 6px;
+	}
+}

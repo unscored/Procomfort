@@ -1,0 +1,420 @@
+footer {
+	background: #3a4433;
+}
+.footer__i {
+	width: 980px;
+	margin: 0 auto;
+	padding: 30px 20px 0 20px;
+	box-sizing: border-box;
+	@include respond-to(tablet-portrait) {
+		width: 100%;
+	}
+	@include respond-to(mobile) {
+		width: 100%;
+		position: relative;
+		padding: 30px 10px 0 10px;
+	}
+}
+.footer-list {
+	padding: 0 0 7px 0;
+	@include respond-to(tablet-portrait) {
+		position: relative;
+		padding: 0 0 95px 0;
+	}
+	@include respond-to(mobile) {
+		display: flex;
+		flex-flow: column wrap;
+	}
+}
+.footer-list__item {
+	float: left;
+	margin: 0 0 0 80px;
+	@include respond-to(tablet-portrait) {
+		margin: 0;
+	}
+	@include respond-to(mobile) {
+		width: 100%;
+		margin: 0;
+	}
+	&:first-child {
+		margin: 0;
+	}
+	&.footer-logo {
+		width: 25%;
+		@include respond-to(tablet-portrait) {
+			width: 33.5%;
+		}
+		@include respond-to(mobile) {
+			width: 240px;
+			order: 3;
+			margin: 0 auto 30px auto;
+		}
+		.logo {
+			width: 235px;
+			float: none;
+			padding: 0 0 15px 0;
+		} 
+		p {
+			font-family: $calibri;
+			font-size: 13px;
+			line-height: 13px;
+			color: $green;
+			&.telephone {
+				font-size: 26px;
+				line-height: 29px;
+				font-weight: bold;
+				color: $green;
+				padding: 15px 0 5px 0;
+			}
+		}
+	}
+	&.footer-menu {
+		width: 29%;
+		@include respond-to(tablet-portrait) {
+			width: 63%;
+			padding: 0 0 0 25px;
+		}
+		@include respond-to(mobile) {
+			width: 100%;
+			order: 1;
+			display: flex;
+			flex-flow: column wrap;
+		}
+		.search {
+			float: none;
+			padding: 0;
+			width: 275px;
+			padding: 0 0 30px 0;
+			position: relative;
+			@include respond-to(tablet-portrait) {
+				position: absolute;
+				bottom: 30px;
+				left: 0;
+				padding: 0;
+				width: 243px;
+			}
+			input[type="submit"] {
+				position: absolute;
+				top: 0;
+				right: 0;
+				@include bg($search-button);
+				cursor: pointer;
+				border: none;
+				outline: none;
+				color:#FFFFFF;
+				-webkit-appearance: none;
+				   -moz-appearance: none;
+				background-color: #3a4433;
+			}
+			input[type="text"] {
+				width: 82%;
+				height: 35px;
+				outline: none;
+				@include placeholder-color(#c3c6bf);
+				border-radius: 5px;
+				box-sizing: border-box;
+				font-family: $calibri;
+				font-size: 15px;
+				line-height: 18px;
+				color: #c3c6bf;
+				padding: 0 10px;
+				border: 1px solid #ababab;
+				-webkit-box-shadow: inset 0px 1px 35px -2px rgba(204,202,204,1);
+				   -moz-box-shadow: inset 0px 1px 35px -2px rgba(204,202,204,1);
+					    box-shadow: inset 0px 1px 35px -2px rgba(204,202,204,1);
+			}
+			@include respond-to(mobile) {
+				display: block;
+				order: 2;
+				width: 240px;
+				margin: 0 auto;
+				padding: 0 0 20px 0;
+			}
+		}
+		.footer-nav {
+			@include respond-to(mobile) {
+				order: 1;
+				width: 240px;
+				margin: 0 auto;
+				padding: 0 0 20px 0;
+			}
+			ul {
+				display: inline-block;
+				padding: 0 0 0 30px;
+				width: 100%;
+				@include respond-to(mobile) {
+					display: flex;
+					flex-flow: column;
+				}
+				&:first-child {
+					padding: 0;
+				}
+				li {
+					padding: 0 0 8px 0;
+					@include respond-to(tablet-portrait){
+						padding: 0 0 3px 0;
+						height: 33px;
+						&:hover {
+							a {
+								text-decoration: none;
+								background-color: #8da07f;
+							}
+						}
+					}
+					@include respond-to(mobile){
+						width: 100%;
+						padding: 0 0 3px 0;
+						height: 33px;
+						&:hover {
+							a {
+								text-decoration: none;
+								background-color: #8da07f;
+							}
+						}
+					}
+					&:nth-child(2n) {
+						float: right;
+						width: 50%;
+						@include respond-to(tablet-portrait){
+							width: 48%;
+						}
+						@include respond-to(mobile) {
+							width: 100%;
+							float: none;
+						}
+					}
+					&:nth-child(2n+1) {
+						float: left;
+						width: 50%;
+						@include respond-to(tablet-portrait){
+							width: 48%;
+						}
+						@include respond-to(mobile) {
+							width: 100%;
+							float: none;
+						}
+					}
+					a {
+						font-family: $calibri;
+						font-size: 16px;
+						line-height: 19px;
+						color: #FFFFFF;
+						&:hover {
+							text-decoration: underline;
+						}
+						@include respond-to(tablet-portrait) {
+							display: block;
+							line-height: 33px;
+							background-color: #616e58;
+							border-radius: 2px;
+							padding: 0 5px 0 20px;
+							&:hover {
+								text-decoration: none;
+							}
+						}
+						@include respond-to(mobile) {
+							display: block;
+							line-height: 33px;
+							background-color: #616e58;
+							border-radius: 2px;
+							padding: 0 5px 0 20px;
+							&:hover {
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.footer-payment {
+		background: #FFFFFF;
+		width: 31%;
+		margin: 0 0 0 60px;
+		padding: 11px 18px;
+		box-sizing:border-box;
+		border-radius: 3px;
+		@include respond-to(tablet-portrait) {
+			float: none;
+			position: absolute;
+			bottom: 10px;
+			right: 0;
+			width: 459px;
+			margin: 0;
+			padding: 11px 18px 15px 18px;
+		}
+		@include respond-to(mobile) {
+			width: 100%;
+			margin: 0 0 30px 0;
+			order: 2;
+		}
+		p {
+			font-family: $calibri;
+			font-size: 13px;
+			line-height: 16px;
+			color: $green;
+			padding: 0 0 10px 0;
+		}
+		>a {
+			font-family: $calibri;
+			font-size: 13px;
+			line-height: 16px;
+			color: $gray;
+			@include respond-to(tablet-portrait) {
+				display: block;
+				width: 96px;
+				position: absolute;
+				right: 18px;
+				top: 50%;
+				transform: translate(0, -50%);
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		ul {
+			padding: 0 0 10px 0;
+			@include respond-to(tablet-portrait) {
+				width: 331px;
+				display: inline-block;
+				padding: 0;
+			}
+			li {
+				float: left;
+				padding: 0 0 0 25px;
+				&:first-child {
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+.subscribe {
+	background: #262e21;
+	padding: 25px 0 25px 25px;
+	position: relative;
+	border-radius: 3px;
+	@include respond-to (tablet-portrait) {
+		display: flex;
+  		flex-flow: row wrap;
+	}
+	@include respond-to (mobile) {
+		padding: 25px 25px 40px 25px;
+		text-align: center;
+		position: relative;
+		-webkit-box-shadow: 0px 13px 0px 13px rgba(38,46,33,1);
+		   -moz-box-shadow: 0px 13px 0px 13px rgba(38,46,33,1);
+		        box-shadow: 0px 13px 0px 13px rgba(38,46,33,1);
+		border-radius: 1px;
+		display: flex;
+  		flex-flow: column;
+  		padding: 25px 20px 40px 20px;
+  		align-items: center;
+	}
+	p {
+		font-family: $calibri;
+		font-size: 19px;
+		line-height: 22px;
+		color: $green;
+		display: inline-block;
+		position: relative;
+		@include respond-to(tablet-portrait) {
+			width: 45%;
+			display: block;
+			order: 1;
+		}
+		@include respond-to(mobile) {
+			font-size: 16px;
+			line-height: 19px;
+			padding: 0 0 15px 0;
+		}
+	}
+	.send {
+		width: 210px;
+		display: inline-block;
+		position: relative;
+		padding: 0 0 0 10px;
+		@include respond-to(tablet-portrait) {
+			height: 35px;
+			order:2;
+			margin: 8px 0 0 0;
+		}
+		@include respond-to(mobile) {
+			width: 171px;
+			margin: 0 0 15px 0;
+			padding: 0 70px 0 0;
+		}
+		input[type="text"] {
+			width: 100%;
+			height: 35px;
+			border: 1px solid #ababab;
+			border-radius: 6px;
+			outline: none;
+			font-family: $calibri;
+			font-size: 15px;
+			line-height: 18px;
+			color: #c3c6bf;
+			padding: 0 10px;
+			box-sizing: border-box;
+			-webkit-box-shadow: inset 0px 1px 35px -2px rgba(204,202,204,1);
+			   -moz-box-shadow: inset 0px 1px 35px -2px rgba(204,202,204,1);
+				    box-shadow: inset 0px 1px 35px -2px rgba(204,202,204,1);
+		}
+		input[type="submit"] {
+			position: absolute;
+			top: 0;
+			right: -70px;
+			height: 100%;
+			font-family: $calibri;
+			font-size: 17px;
+			line-height: 20px;
+			color: #FFFFFF;
+			background-color: #489900;
+			border-radius: 6px;
+			cursor: pointer;
+			border: none;
+			outline: none;
+			padding: 0 18px;
+			-webkit-appearance: none;
+			   -moz-appearance: none;
+			&:hover {
+			   	background-color: #5dc004;
+			}
+			@include respond-to (mobile) {
+				right: 0;
+			}
+		}
+	}
+	.example {
+			font-family: $calibri;
+			font-size: 13px;
+			line-height: 16px;
+			color: #FFFFFF;
+			position: absolute;
+			bottom: 18px;
+    		right: 328px; 
+			&:hover {
+				text-decoration: underline;
+			}
+			@include respond-to(tablet-portrait) {
+				order: 3;
+				display: block;
+				width: 30px;
+				right: 53px;
+    			bottom: 30px;
+			}
+			@include respond-to(mobile) {
+				position: relative;
+				bottom: 0;
+				right: 0;
+				font-size: 16px;
+				line-height: 19px;
+				background-color: #4d5a44;
+				padding: 10px;
+				width: 230px;
+				display: inline-block;
+				text-align: center;
+				border-radius: 2px;
+			}
+		}
+}

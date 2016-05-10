@@ -1,0 +1,58 @@
+// Mixins.
+
+@mixin nl {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    list-style-position: outside;
+}
+
+@mixin cf {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .lt-ie8 & {
+        zoom: 1;
+    }
+}
+
+@mixin blocks-justify {
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+// You can add your own mixins here:
+
+// placeholder color
+@mixin placeholder-color($color) {
+    &.placeholder {
+        color: $color;
+    }
+    &:-moz-input-placeholder {
+        color: $color;
+    }
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+}
+
+//media mixins
+@mixin respond-to($media) {
+    @if $media == mobile {
+        @media only screen and (max-width: 767px) { @content; }
+    }
+    @else if $media == tablet {
+        @media only screen and (min-width: 768px) and (max-width: 1024px) { @content; }
+    }
+    @else if $media == tablet-portrait {
+        @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) { @content;}
+    }
+}

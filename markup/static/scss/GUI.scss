@@ -1,0 +1,227 @@
+/*******************************************************ICONS**********************************************/
+.icon {
+	position: absolute;
+	display: inline-block;
+}
+.icon_facebook {
+	display: block;
+	@include bg($facebook);
+}
+.icon_twitter {
+	display: block;
+	@include bg($twitter);
+}
+.icon_vk {
+	display: block;
+	@include bg($vk);
+}
+.icon_ok {
+	display: block;
+	@include bg($ok);
+}
+.icon_rectangle-black {
+	@include bg($rectangle-black);
+	top: 50%;
+	right: -10px;
+	transform: translete(0, -50%);
+}
+.icon_rectangle-big-black {
+	@include bg($rectangle-big-black);
+	top: 50%;
+	right: -12px;
+	transform: translate(0, -50%);
+}
+.icon_shop-cart {
+	@include bg($shop-cart);
+	top: 50%;
+	left: -10px;
+	transform: translate(0, -50%);
+}
+.icon_visa {
+	display: block;
+	@include bg($visa);
+}
+.icon_webmoney {
+	display: block;
+	@include bg($webmoney);
+}
+.icon_ya {
+	display: block;
+	@include bg($ya);
+}
+.icon_minus {
+	@include bg($minus);
+	top: 50%;
+	left: 11px;
+	transform: translate(0, -50%);
+}
+.icon_plus {
+	@include bg($plus);
+	top: 50%;
+	right: 11px;
+	transform: translate(0, -50%);
+}
+.icon_green-arrow {
+	@include bg($green-arrow);
+	top: 50%;
+	right: -10px;
+	margin-top: -3px;
+}
+.icon_track {
+	@include bg($track);
+	top: 5px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.icon_close-button {
+	@include bg($close-button);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.icon_mobile-menu {
+	@include bg($mobile-menu);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.icon_close-menu-button {
+	@include bg($close-menu-button);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.icon_mobile-search {
+	@include bg($mobile-search);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.icon_mobile-cart {
+	@include bg($mobile-cart);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/**************************************BUTTONS*******************************************/
+.btn {
+	display: inline-block;
+	height: 40px;
+	box-sizing: border-box;
+}
+.btn_orange {
+	min-width: 222px;
+	white-space: nowrap;
+	padding: 0 15px;
+	background-color: $orange;
+	border: 3px solid #abe076;
+	border-radius: 7px;
+	font-family: $calibri;
+	font-size: 18px;
+	line-height: 33px;
+	font-weight: bold;
+	color: #FFFFFF;
+	&:hover {
+		background-color: #e96403;
+	}
+	@include respond-to(mobile) {
+		position: absolute;
+		bottom: 12px;
+		left: 50%;
+		transform:translate(-50%, 0);
+	}
+}
+.btn_gray {
+	min-width: 220px;
+	white-space: nowrap;
+	padding: 0 15px;
+	background-color: $green;
+	border-radius: 3px;
+	font-family: $calibri;
+	font-size: 18px;
+	line-height: 40px;
+	font-weight: normal;
+	color: #FFFFFF;
+	margin: 2% 0 0 55%;
+	box-sizing:border-box;
+	text-align: center;
+	&:hover {
+		background-color: #e96403;
+	}
+}
+.btn_mini-cart {
+	float: right;
+	width: 220px;
+	background: #c3c6bf;
+	border-radius: 3px;
+	text-align: center;
+	margin: 3px 0 0 0;
+	span {
+		font-family: $calibri;
+		font-size: 15px;
+		line-height: 40px;
+		color: #FFFFFF;
+		position: relative;
+		padding: 0 0 0 30px;
+	}
+	@include respond-to(tablet-portrait) {
+		margin: 0;
+		position: absolute;
+		top: 0;
+		right: 20px;
+	}
+	@include respond-to(mobile) {
+			display: none;
+		}
+}
+.btn_simple-orange {
+	float: right;
+	width: 278px;
+	background: $orange;
+	border-radius: 1px;
+	text-align: center;
+	font-family: $calibri;
+	font-size: 15px;
+	line-height: 40px;
+	color: #FFFFFF;
+	position: relative;
+	&:hover {
+		background-color: #e96403;
+	}
+	@include respond-to(tablet-portrait) {
+		width: 200px;
+		height: 35px;
+		line-height: 35px;
+	}
+}
+.btn_add-cart {
+	width: 100%;
+	position: absolute;
+	bottom: -30px;
+	left: 0;
+	background-color: #4a9d00;
+	border: 1px solid #4a9d00;
+	border-radius: 4px;
+	font-family: $calibri;
+	font-size: 18px;
+	line-height: 35px;
+	color: #FFFFFF;
+	cursor: pointer;
+	opacity: 0;
+	transition: .8s;
+	&:hover {
+		background-color: #e96403;
+		border: 1px solid #e96403;
+	}
+}
+.btn_tablet-menu {
+	background-color: #e5e7e2;
+	padding: 0 15px;
+	font-family: $calibri;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 40px;
+	border-radius: 3px;
+	color: $gray;
+	height: 41px;
+}
